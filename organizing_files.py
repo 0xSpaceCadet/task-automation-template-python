@@ -31,15 +31,15 @@ def functionality() :
 d_path = m_path.cwd()
 (d_path / 'spam').mkdir(parents=True, exist_ok=True)
 
-# # setup and teardown using WITH operator
-# with open(file=d_path/'spam'/'spam_20251105.txt', mode='w', encoding='utf-8') as c_file:
-#     c_file.write('****\nSpam File Logged on November 5, 2025\n****')
-#
-# # graceful execution as it doesn't COPY it bu just copies it
-# shutil.copy(d_path/'spam'/'spam_20251105.txt', d_path)
-# shutil.copy(d_path/'spam'/'spam_20251105.txt', d_path/'spam'/'spam_20251105_2.txt')
-#
-# shutil.copytree(d_path/'spam', d_path/'spam_bkp')
+# setup and teardown using WITH operator
+with open(file=d_path/'spam'/'spam_20251105.txt', mode='w', encoding='utf-8') as c_file:
+    c_file.write('****\nSpam File Logged on November 5, 2025\n****')
+
+# graceful execution as it doesn't COPY it bu just copies it
+shutil.copy(d_path/'spam'/'spam_20251105.txt', d_path)
+shutil.copy(d_path/'spam'/'spam_20251105.txt', d_path/'spam'/'spam_20251105_2.txt')
+
+shutil.copytree(d_path/'spam', d_path/'spam_bkp')
 
 # just like copy we have MOVE
 # rmtree, rmdir, unlink
