@@ -25,9 +25,13 @@ class SnAEmp:  # pass
         # self.pay = int(self.pay * SnAEmp.raise_percent // 100)  # class raise modular
 
 
+print(SnAEmp.batch_size)
+
 emp1 = SnAEmp('gamma', 2)
 print(emp1.email, emp1.name, emp1.identifier, emp1.level)
 print('{}, {}'.format(emp1.email, emp1.name))
 
 print('mimmicking getter method\n', emp1.details())  # from instance
 print('mimmicking getter method\n', SnAEmp.details(emp1))  # from # class
+
+print(SnAEmp.batch_size)
